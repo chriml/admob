@@ -2626,7 +2626,7 @@
               "name": "since"
             }
           ],
-          "docs": "Banner Ad Size, defaults to ADAPTIVE_BANNER.\r\nIT can be: ADAPTIVE_BANNER, SMART_BANNER, BANNER,\r\nMEDIUM_RECTANGLE, FULL_BANNER, LEADERBOARD",
+          "docs": "Banner Ad Size, defaults to ADAPTIVE_BANNER.\nIT can be: ADAPTIVE_BANNER, SMART_BANNER, BANNER,\nMEDIUM_RECTANGLE, FULL_BANNER, LEADERBOARD",
           "complexTypes": [],
           "type": "any"
         },
@@ -2652,7 +2652,7 @@
               "name": "since"
             }
           ],
-          "docs": "Set Banner Ad position.\r\nTOP_CENTER or CENTER or BOTTOM_CENTER",
+          "docs": "Set Banner Ad position.\nTOP_CENTER or CENTER or BOTTOM_CENTER",
           "complexTypes": [],
           "type": "any"
         }
@@ -3226,37 +3226,37 @@
       "members": [
         {
           "name": "SizeChanged",
-          "value": "\"nativeAdSizeChanged\"",
+          "value": "'nativeAdSizeChanged'",
           "tags": [],
           "docs": ""
         },
         {
           "name": "Loaded",
-          "value": "\"nativeAdLoaded\"",
+          "value": "'nativeAdLoaded'",
           "tags": [],
           "docs": ""
         },
         {
           "name": "FailedToLoad",
-          "value": "\"nativeAdFailedToLoad\"",
+          "value": "'nativeAdFailedToLoad'",
           "tags": [],
           "docs": ""
         },
         {
           "name": "Opened",
-          "value": "\"nativeAdOpened\"",
+          "value": "'nativeAdOpened'",
           "tags": [],
           "docs": "Open \"Adsense\" Event after user click native"
         },
         {
           "name": "Closed",
-          "value": "\"nativeAdClosed\"",
+          "value": "'nativeAdClosed'",
           "tags": [],
           "docs": "Close \"Adsense\" Event after user click native"
         },
         {
           "name": "AdImpression",
-          "value": "\"nativeAdImpression\"",
+          "value": "'nativeAdImpression'",
           "tags": [],
           "docs": "Similarly, this method should be called when an impression is recorded for the ad by the mediated SDK."
         }

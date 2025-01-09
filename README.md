@@ -1401,12 +1401,12 @@ From T, pick a set of properties whose keys are in the union K
 
 | Members            | Value                               | Description                                                                                            |
 | ------------------ | ----------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| **`SizeChanged`**  | <code>"nativeAdSizeChanged"</code>  |                                                                                                        |
-| **`Loaded`**       | <code>"nativeAdLoaded"</code>       |                                                                                                        |
-| **`FailedToLoad`** | <code>"nativeAdFailedToLoad"</code> |                                                                                                        |
-| **`Opened`**       | <code>"nativeAdOpened"</code>       | Open "Adsense" Event after user click native                                                           |
-| **`Closed`**       | <code>"nativeAdClosed"</code>       | Close "Adsense" Event after user click native                                                          |
-| **`AdImpression`** | <code>"nativeAdImpression"</code>   | Similarly, this method should be called when an impression is recorded for the ad by the mediated SDK. |
+| **`SizeChanged`**  | <code>'nativeAdSizeChanged'</code>  |                                                                                                        |
+| **`Loaded`**       | <code>'nativeAdLoaded'</code>       |                                                                                                        |
+| **`FailedToLoad`** | <code>'nativeAdFailedToLoad'</code> |                                                                                                        |
+| **`Opened`**       | <code>'nativeAdOpened'</code>       | Open "Adsense" Event after user click native                                                           |
+| **`Closed`**       | <code>'nativeAdClosed'</code>       | Close "Adsense" Event after user click native                                                          |
+| **`AdImpression`** | <code>'nativeAdImpression'</code>   | Similarly, this method should be called when an impression is recorded for the ad by the mediated SDK. |
 
 
 #### AdmobConsentStatus

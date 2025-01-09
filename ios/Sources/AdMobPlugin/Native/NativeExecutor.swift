@@ -49,6 +49,8 @@ class NativeExecutor: NSObject, GADNativeAdLoaderDelegate {
             "icon": nativeAd.icon?.image?.toBase64String() ?? "",
             "mediaURL": nativeAd.mediaContent.mainImage?.toBase64String() ?? ""
         ]
+        NSLog(adData)
+        NSLog(nativeAd.headline)
 
         // Notify the web layer
         self.plugin?.notifyListeners("onNativeAdLoaded", data: adData)
