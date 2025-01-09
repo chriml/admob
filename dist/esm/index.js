@@ -4,6 +4,7 @@ const AdMob = registerPlugin('AdMob', {
 });
 export * from './definitions';
 export * from './banner/index';
+export * from './native/index';
 export * from './interstitial/index';
 export * from './reward-interstitial/index';
 export * from './reward/index';

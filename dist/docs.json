@@ -767,6 +767,562 @@
         "slug": "addlistenerbanneradplugineventsadimpression-"
       },
       {
+        "name": "loadNativeAd",
+        "signature": "(options: NativeAdOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "AdOptions",
+            "type": "NativeAdOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "group",
+            "text": [
+              {
+                "text": "Banner",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "param",
+            "text": [
+              {
+                "text": "options",
+                "kind": "parameterName"
+              },
+              {
+                "text": " ",
+                "kind": "space"
+              },
+              {
+                "text": "AdOptions",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "since",
+            "text": [
+              {
+                "text": "1.1.2",
+                "kind": "text"
+              }
+            ]
+          }
+        ],
+        "docs": "Show a banner Ad",
+        "complexTypes": [
+          "NativeAdOptions"
+        ],
+        "slug": "loadnativead"
+      },
+      {
+        "name": "hideBanner",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "group",
+            "text": [
+              {
+                "text": "Banner",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "since",
+            "text": [
+              {
+                "text": "1.1.2",
+                "kind": "text"
+              }
+            ]
+          }
+        ],
+        "docs": "Hide the banner, remove it from screen, but can show it later",
+        "complexTypes": [],
+        "slug": "hidebanner"
+      },
+      {
+        "name": "resumeBanner",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "group",
+            "text": [
+              {
+                "text": "Banner",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "since",
+            "text": [
+              {
+                "text": "1.1.2",
+                "kind": "text"
+              }
+            ]
+          }
+        ],
+        "docs": "Resume the banner, show it after hide",
+        "complexTypes": [],
+        "slug": "resumebanner"
+      },
+      {
+        "name": "removeBanner",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "group",
+            "text": [
+              {
+                "text": "Banner",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "since",
+            "text": [
+              {
+                "text": "1.1.2",
+                "kind": "text"
+              }
+            ]
+          }
+        ],
+        "docs": "Destroy the banner, remove it from screen.",
+        "complexTypes": [],
+        "slug": "removebanner"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: NativeAdPluginEvents.SizeChanged, listenerFunc: (info: any) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "bannerAdSizeChanged",
+            "type": "NativeAdPluginEvents.SizeChanged"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(info: any) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [
+          {
+            "name": "group",
+            "text": [
+              {
+                "text": "Banner",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "param",
+            "text": [
+              {
+                "text": "eventName",
+                "kind": "parameterName"
+              },
+              {
+                "text": " ",
+                "kind": "space"
+              },
+              {
+                "text": "bannerAdSizeChanged",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "param",
+            "text": [
+              {
+                "text": "listenerFunc",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "since",
+            "text": [
+              {
+                "text": "3.0.0",
+                "kind": "text"
+              }
+            ]
+          }
+        ],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "NativeAdPluginEvents"
+        ],
+        "slug": "addlistenernativeadplugineventssizechanged-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: NativeAdPluginEvents.Loaded, listenerFunc: () => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "bannerAdLoaded",
+            "type": "NativeAdPluginEvents.Loaded"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "() => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [
+          {
+            "name": "group",
+            "text": [
+              {
+                "text": "Banner",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "param",
+            "text": [
+              {
+                "text": "eventName",
+                "kind": "parameterName"
+              },
+              {
+                "text": " ",
+                "kind": "space"
+              },
+              {
+                "text": "bannerAdLoaded",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "param",
+            "text": [
+              {
+                "text": "listenerFunc",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "since",
+            "text": [
+              {
+                "text": "3.0.0",
+                "kind": "text"
+              }
+            ]
+          }
+        ],
+        "docs": "Notice: request loaded Banner ad",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "NativeAdPluginEvents"
+        ],
+        "slug": "addlistenernativeadplugineventsloaded-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: NativeAdPluginEvents.FailedToLoad, listenerFunc: (info: AdMobError) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "bannerAdFailedToLoad",
+            "type": "NativeAdPluginEvents.FailedToLoad"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(info: AdMobError) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [
+          {
+            "name": "group",
+            "text": [
+              {
+                "text": "Banner",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "param",
+            "text": [
+              {
+                "text": "eventName",
+                "kind": "parameterName"
+              },
+              {
+                "text": " ",
+                "kind": "space"
+              },
+              {
+                "text": "bannerAdFailedToLoad",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "param",
+            "text": [
+              {
+                "text": "listenerFunc",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "since",
+            "text": [
+              {
+                "text": "3.0.0",
+                "kind": "text"
+              }
+            ]
+          }
+        ],
+        "docs": "Notice: request failed Banner ad",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "NativeAdPluginEvents",
+          "AdMobError"
+        ],
+        "slug": "addlistenernativeadplugineventsfailedtoload-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: NativeAdPluginEvents.Opened, listenerFunc: () => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "bannerAdOpened",
+            "type": "NativeAdPluginEvents.Opened"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "() => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [
+          {
+            "name": "group",
+            "text": [
+              {
+                "text": "Banner",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "param",
+            "text": [
+              {
+                "text": "eventName",
+                "kind": "parameterName"
+              },
+              {
+                "text": " ",
+                "kind": "space"
+              },
+              {
+                "text": "bannerAdOpened",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "param",
+            "text": [
+              {
+                "text": "listenerFunc",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "since",
+            "text": [
+              {
+                "text": "3.0.0",
+                "kind": "text"
+              }
+            ]
+          }
+        ],
+        "docs": "Notice: full-screen banner view will be presented in response to the user clicking on an ad.",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "NativeAdPluginEvents"
+        ],
+        "slug": "addlistenernativeadplugineventsopened-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: NativeAdPluginEvents.Closed, listenerFunc: () => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "bannerAdClosed",
+            "type": "NativeAdPluginEvents.Closed"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "() => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [
+          {
+            "name": "group",
+            "text": [
+              {
+                "text": "Banner",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "param",
+            "text": [
+              {
+                "text": "eventName",
+                "kind": "parameterName"
+              },
+              {
+                "text": " ",
+                "kind": "space"
+              },
+              {
+                "text": "bannerAdClosed",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "param",
+            "text": [
+              {
+                "text": "listenerFunc",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "since",
+            "text": [
+              {
+                "text": "3.0.0",
+                "kind": "text"
+              }
+            ]
+          }
+        ],
+        "docs": "Notice: The full-screen banner view will been dismissed.",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "NativeAdPluginEvents"
+        ],
+        "slug": "addlistenernativeadplugineventsclosed-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: NativeAdPluginEvents.AdImpression, listenerFunc: () => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "AdImpression",
+            "type": "NativeAdPluginEvents.AdImpression"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "() => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [
+          {
+            "name": "group",
+            "text": [
+              {
+                "text": "Banner",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "param",
+            "text": [
+              {
+                "text": "eventName",
+                "kind": "parameterName"
+              },
+              {
+                "text": " ",
+                "kind": "space"
+              },
+              {
+                "text": "AdImpression",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "param",
+            "text": [
+              {
+                "text": "listenerFunc",
+                "kind": "text"
+              }
+            ]
+          },
+          {
+            "name": "since",
+            "text": [
+              {
+                "text": "3.0.0",
+                "kind": "text"
+              }
+            ]
+          }
+        ],
+        "docs": "Unimplemented",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "NativeAdPluginEvents"
+        ],
+        "slug": "addlistenernativeadplugineventsadimpression-"
+      },
+      {
         "name": "requestConsentInfo",
         "signature": "(options?: AdmobConsentRequestOptions) => Promise<AdmobConsentInfo>",
         "parameters": [
@@ -1560,6 +2116,7 @@
     "properties": [],
     "importObject": [
       "BannerDefinitions",
+      "NativeDefinitions",
       "AdmobConsentDefinitions",
       "InterstitialDefinitions",
       "RewardDefinitions",
@@ -1748,6 +2305,7 @@
       ],
       "importObject": [
         "BannerDefinitions",
+        "NativeDefinitions",
         "AdmobConsentDefinitions",
         "InterstitialDefinitions",
         "RewardDefinitions",
@@ -1827,6 +2385,7 @@
       ],
       "importObject": [
         "BannerDefinitions",
+        "NativeDefinitions",
         "AdmobConsentDefinitions",
         "InterstitialDefinitions",
         "RewardDefinitions",
@@ -1879,6 +2438,7 @@
       ],
       "importObject": [
         "BannerDefinitions",
+        "NativeDefinitions",
         "AdmobConsentDefinitions",
         "InterstitialDefinitions",
         "RewardDefinitions",
@@ -2036,6 +2596,70 @@
         }
       ],
       "importObject": []
+    },
+    {
+      "name": "NativeAdOptions",
+      "slug": "nativeadoptions",
+      "docs": "This interface extends AdOptions",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "adSize",
+          "tags": [
+            {
+              "text": [
+                {
+                  "text": "ADAPTIVE_BANNER",
+                  "kind": "text"
+                }
+              ],
+              "name": "default"
+            },
+            {
+              "text": [
+                {
+                  "text": "3.0.0",
+                  "kind": "text"
+                }
+              ],
+              "name": "since"
+            }
+          ],
+          "docs": "Banner Ad Size, defaults to ADAPTIVE_BANNER.\r\nIT can be: ADAPTIVE_BANNER, SMART_BANNER, BANNER,\r\nMEDIUM_RECTANGLE, FULL_BANNER, LEADERBOARD",
+          "complexTypes": [],
+          "type": "any"
+        },
+        {
+          "name": "position",
+          "tags": [
+            {
+              "text": [
+                {
+                  "text": "TOP_CENTER",
+                  "kind": "text"
+                }
+              ],
+              "name": "default"
+            },
+            {
+              "text": [
+                {
+                  "text": "1.1.2",
+                  "kind": "text"
+                }
+              ],
+              "name": "since"
+            }
+          ],
+          "docs": "Set Banner Ad position.\r\nTOP_CENTER or CENTER or BOTTOM_CENTER",
+          "complexTypes": [],
+          "type": "any"
+        }
+      ],
+      "importObject": [
+        "AdOptions"
+      ]
     },
     {
       "name": "AdmobConsentInfo",
@@ -2591,6 +3215,48 @@
         {
           "name": "AdImpression",
           "value": "\"bannerAdImpression\"",
+          "tags": [],
+          "docs": "Similarly, this method should be called when an impression is recorded for the ad by the mediated SDK."
+        }
+      ]
+    },
+    {
+      "name": "NativeAdPluginEvents",
+      "slug": "nativeadpluginevents",
+      "members": [
+        {
+          "name": "SizeChanged",
+          "value": "\"nativeAdSizeChanged\"",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Loaded",
+          "value": "\"nativeAdLoaded\"",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "FailedToLoad",
+          "value": "\"nativeAdFailedToLoad\"",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Opened",
+          "value": "\"nativeAdOpened\"",
+          "tags": [],
+          "docs": "Open \"Adsense\" Event after user click native"
+        },
+        {
+          "name": "Closed",
+          "value": "\"nativeAdClosed\"",
+          "tags": [],
+          "docs": "Close \"Adsense\" Event after user click native"
+        },
+        {
+          "name": "AdImpression",
+          "value": "\"nativeAdImpression\"",
           "tags": [],
           "docs": "Similarly, this method should be called when an impression is recorded for the ad by the mediated SDK."
         }

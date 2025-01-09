@@ -7,6 +7,8 @@ class BannerExecutor: NSObject, GADBannerViewDelegate {
     var bannerView: GADBannerView!
 
     func showBanner(_ call: CAPPluginCall, _ request: GADRequest, _ adUnitID: String) {
+        NSLog("test banner")
+
         if let rootViewController = plugin?.getRootVC() {
 
             let adSize = call.getString("adSize") ?? "ADAPTIVE_BANNER"
@@ -146,6 +148,7 @@ class BannerExecutor: NSObject, GADBannerViewDelegate {
     /// Tells the delegate an ad request loaded an ad.
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
         NSLog("bannerViewDidReceiveAd")
+        NSLog("test banner")
 
         self.plugin?.notifyListeners(BannerAdPluginEvents.SizeChanged.rawValue, data: [
             "width": bannerView.frame.width,

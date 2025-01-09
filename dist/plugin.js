@@ -105,6 +105,26 @@ var capacitorStripe = (function (exports, core) {
     })(exports.BannerAdSize || (exports.BannerAdSize = {}));
 
     // This enum should be keep in sync with their native equivalents with the same name
+    exports.NativeAdPluginEvents = void 0;
+    (function (NativeAdPluginEvents) {
+        NativeAdPluginEvents["SizeChanged"] = "nativeAdSizeChanged";
+        NativeAdPluginEvents["Loaded"] = "nativeAdLoaded";
+        NativeAdPluginEvents["FailedToLoad"] = "nativeAdFailedToLoad";
+        /**
+         * Open "Adsense" Event after user click native
+         */
+        NativeAdPluginEvents["Opened"] = "nativeAdOpened";
+        /**
+         * Close "Adsense" Event after user click native
+         */
+        NativeAdPluginEvents["Closed"] = "nativeAdClosed";
+        /**
+         * Similarly, this method should be called when an impression is recorded for the ad by the mediated SDK.
+         */
+        NativeAdPluginEvents["AdImpression"] = "nativeAdImpression";
+    })(exports.NativeAdPluginEvents || (exports.NativeAdPluginEvents = {}));
+
+    // This enum should be keep in sync with their native equivalents with the same name
     exports.InterstitialAdPluginEvents = void 0;
     (function (InterstitialAdPluginEvents) {
         /**
@@ -285,6 +305,9 @@ var capacitorStripe = (function (exports, core) {
         }
         async showBanner(options) {
             console.log('showBanner', options);
+        }
+        async loadNativeAd(options) {
+            console.log('loadNativeAd', options);
         }
         // Hide the banner, remove it from screen, but can show it later
         async hideBanner() {

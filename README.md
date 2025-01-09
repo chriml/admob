@@ -356,6 +356,16 @@ AdMob.addListener(RewardAdPluginEvents.Rewarded, async () => {
 * [`addListener(BannerAdPluginEvents.Opened, ...)`](#addlistenerbanneradplugineventsopened-)
 * [`addListener(BannerAdPluginEvents.Closed, ...)`](#addlistenerbanneradplugineventsclosed-)
 * [`addListener(BannerAdPluginEvents.AdImpression, ...)`](#addlistenerbanneradplugineventsadimpression-)
+* [`loadNativeAd(...)`](#loadnativead)
+* [`hideBanner()`](#hidebanner)
+* [`resumeBanner()`](#resumebanner)
+* [`removeBanner()`](#removebanner)
+* [`addListener(NativeAdPluginEvents.SizeChanged, ...)`](#addlistenernativeadplugineventssizechanged-)
+* [`addListener(NativeAdPluginEvents.Loaded, ...)`](#addlistenernativeadplugineventsloaded-)
+* [`addListener(NativeAdPluginEvents.FailedToLoad, ...)`](#addlistenernativeadplugineventsfailedtoload-)
+* [`addListener(NativeAdPluginEvents.Opened, ...)`](#addlistenernativeadplugineventsopened-)
+* [`addListener(NativeAdPluginEvents.Closed, ...)`](#addlistenernativeadplugineventsclosed-)
+* [`addListener(NativeAdPluginEvents.AdImpression, ...)`](#addlistenernativeadplugineventsadimpression-)
 * [`requestConsentInfo(...)`](#requestconsentinfo)
 * [`showConsentForm()`](#showconsentform)
 * [`resetConsentInfo()`](#resetconsentinfo)
@@ -610,6 +620,160 @@ Unimplemented
 | Param              | Type                                                                               | Description  |
 | ------------------ | ---------------------------------------------------------------------------------- | ------------ |
 | **`eventName`**    | <code><a href="#banneradpluginevents">BannerAdPluginEvents.AdImpression</a></code> | AdImpression |
+| **`listenerFunc`** | <code>() =&gt; void</code>                                                         |              |
+
+**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
+
+--------------------
+
+
+### loadNativeAd(...)
+
+```typescript
+loadNativeAd(options: NativeAdOptions) => Promise<void>
+```
+
+Show a banner Ad
+
+| Param         | Type                                                        | Description                        |
+| ------------- | ----------------------------------------------------------- | ---------------------------------- |
+| **`options`** | <code><a href="#nativeadoptions">NativeAdOptions</a></code> | <a href="#adoptions">AdOptions</a> |
+
+--------------------
+
+
+### hideBanner()
+
+```typescript
+hideBanner() => Promise<void>
+```
+
+Hide the banner, remove it from screen, but can show it later
+
+--------------------
+
+
+### resumeBanner()
+
+```typescript
+resumeBanner() => Promise<void>
+```
+
+Resume the banner, show it after hide
+
+--------------------
+
+
+### removeBanner()
+
+```typescript
+removeBanner() => Promise<void>
+```
+
+Destroy the banner, remove it from screen.
+
+--------------------
+
+
+### addListener(NativeAdPluginEvents.SizeChanged, ...)
+
+```typescript
+addListener(eventName: NativeAdPluginEvents.SizeChanged, listenerFunc: (info: any) => void) => Promise<PluginListenerHandle>
+```
+
+| Param              | Type                                                                              | Description         |
+| ------------------ | --------------------------------------------------------------------------------- | ------------------- |
+| **`eventName`**    | <code><a href="#nativeadpluginevents">NativeAdPluginEvents.SizeChanged</a></code> | bannerAdSizeChanged |
+| **`listenerFunc`** | <code>(info: any) =&gt; void</code>                                               |                     |
+
+**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
+
+--------------------
+
+
+### addListener(NativeAdPluginEvents.Loaded, ...)
+
+```typescript
+addListener(eventName: NativeAdPluginEvents.Loaded, listenerFunc: () => void) => Promise<PluginListenerHandle>
+```
+
+Notice: request loaded Banner ad
+
+| Param              | Type                                                                         | Description    |
+| ------------------ | ---------------------------------------------------------------------------- | -------------- |
+| **`eventName`**    | <code><a href="#nativeadpluginevents">NativeAdPluginEvents.Loaded</a></code> | bannerAdLoaded |
+| **`listenerFunc`** | <code>() =&gt; void</code>                                                   |                |
+
+**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
+
+--------------------
+
+
+### addListener(NativeAdPluginEvents.FailedToLoad, ...)
+
+```typescript
+addListener(eventName: NativeAdPluginEvents.FailedToLoad, listenerFunc: (info: AdMobError) => void) => Promise<PluginListenerHandle>
+```
+
+Notice: request failed Banner ad
+
+| Param              | Type                                                                               | Description          |
+| ------------------ | ---------------------------------------------------------------------------------- | -------------------- |
+| **`eventName`**    | <code><a href="#nativeadpluginevents">NativeAdPluginEvents.FailedToLoad</a></code> | bannerAdFailedToLoad |
+| **`listenerFunc`** | <code>(info: <a href="#admoberror">AdMobError</a>) =&gt; void</code>               |                      |
+
+**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
+
+--------------------
+
+
+### addListener(NativeAdPluginEvents.Opened, ...)
+
+```typescript
+addListener(eventName: NativeAdPluginEvents.Opened, listenerFunc: () => void) => Promise<PluginListenerHandle>
+```
+
+Notice: full-screen banner view will be presented in response to the user clicking on an ad.
+
+| Param              | Type                                                                         | Description    |
+| ------------------ | ---------------------------------------------------------------------------- | -------------- |
+| **`eventName`**    | <code><a href="#nativeadpluginevents">NativeAdPluginEvents.Opened</a></code> | bannerAdOpened |
+| **`listenerFunc`** | <code>() =&gt; void</code>                                                   |                |
+
+**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
+
+--------------------
+
+
+### addListener(NativeAdPluginEvents.Closed, ...)
+
+```typescript
+addListener(eventName: NativeAdPluginEvents.Closed, listenerFunc: () => void) => Promise<PluginListenerHandle>
+```
+
+Notice: The full-screen banner view will been dismissed.
+
+| Param              | Type                                                                         | Description    |
+| ------------------ | ---------------------------------------------------------------------------- | -------------- |
+| **`eventName`**    | <code><a href="#nativeadpluginevents">NativeAdPluginEvents.Closed</a></code> | bannerAdClosed |
+| **`listenerFunc`** | <code>() =&gt; void</code>                                                   |                |
+
+**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
+
+--------------------
+
+
+### addListener(NativeAdPluginEvents.AdImpression, ...)
+
+```typescript
+addListener(eventName: NativeAdPluginEvents.AdImpression, listenerFunc: () => void) => Promise<PluginListenerHandle>
+```
+
+Unimplemented
+
+| Param              | Type                                                                               | Description  |
+| ------------------ | ---------------------------------------------------------------------------------- | ------------ |
+| **`eventName`**    | <code><a href="#nativeadpluginevents">NativeAdPluginEvents.AdImpression</a></code> | AdImpression |
 | **`listenerFunc`** | <code>() =&gt; void</code>                                                         |              |
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
@@ -1091,6 +1255,16 @@ https://developers.google.com/android/reference/com/google/android/gms/ads/AdErr
 | **`message`** | <code>string</code> | Gets the message describing the error. |
 
 
+#### NativeAdOptions
+
+This interface extends <a href="#adoptions">AdOptions</a>
+
+| Prop           | Type             | Description                                                                                                                               |
+| -------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **`adSize`**   | <code>any</code> | Banner Ad Size, defaults to ADAPTIVE_BANNER. IT can be: ADAPTIVE_BANNER, SMART_BANNER, BANNER, MEDIUM_RECTANGLE, FULL_BANNER, LEADERBOARD |
+| **`position`** | <code>any</code> | Set Banner Ad position. TOP_CENTER or CENTER or BOTTOM_CENTER                                                                             |
+
+
 #### AdmobConsentInfo
 
 | Prop                         | Type                                                              | Description                                           |
@@ -1221,6 +1395,18 @@ From T, pick a set of properties whose keys are in the union K
 | **`Opened`**       | <code>"bannerAdOpened"</code>       | Open "Adsense" Event after user click banner                                                           |
 | **`Closed`**       | <code>"bannerAdClosed"</code>       | Close "Adsense" Event after user click banner                                                          |
 | **`AdImpression`** | <code>"bannerAdImpression"</code>   | Similarly, this method should be called when an impression is recorded for the ad by the mediated SDK. |
+
+
+#### NativeAdPluginEvents
+
+| Members            | Value                               | Description                                                                                            |
+| ------------------ | ----------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **`SizeChanged`**  | <code>"nativeAdSizeChanged"</code>  |                                                                                                        |
+| **`Loaded`**       | <code>"nativeAdLoaded"</code>       |                                                                                                        |
+| **`FailedToLoad`** | <code>"nativeAdFailedToLoad"</code> |                                                                                                        |
+| **`Opened`**       | <code>"nativeAdOpened"</code>       | Open "Adsense" Event after user click native                                                           |
+| **`Closed`**       | <code>"nativeAdClosed"</code>       | Close "Adsense" Event after user click native                                                          |
+| **`AdImpression`** | <code>"nativeAdImpression"</code>   | Similarly, this method should be called when an impression is recorded for the ad by the mediated SDK. |
 
 
 #### AdmobConsentStatus

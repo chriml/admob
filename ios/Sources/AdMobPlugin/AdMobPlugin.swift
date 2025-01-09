@@ -19,6 +19,7 @@ public class AdMobPlugin: CAPPlugin, CAPBridgedPlugin {
         CAPPluginMethod(name: "setApplicationMuted", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "setApplicationVolume", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "showBanner", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "loadNativeAd", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "resumeBanner", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "hideBanner", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "removeBanner", returnType: CAPPluginReturnPromise),
@@ -32,6 +33,8 @@ public class AdMobPlugin: CAPPlugin, CAPBridgedPlugin {
 
     private let bannerExecutor = BannerExecutor()
     private let adInterstitialExecutor = AdInterstitialExecutor()
+    private let nativeExecutor = NativeExecutor()
+
     private let adRewardExecutor = AdRewardExecutor()
     private let adRewardInterstitialExecutor = AdRewardInterstitialExecutor()
     private let consentExecutor = ConsentExecutor()
@@ -42,6 +45,7 @@ public class AdMobPlugin: CAPPlugin, CAPBridgedPlugin {
      */
     @objc func initialize(_ call: CAPPluginCall) {
         self.bannerExecutor.plugin = self
+        self.nativeExecutor.plugin = self
         self.adInterstitialExecutor.plugin = self
         self.adRewardExecutor.plugin = self
         self.adRewardInterstitialExecutor.plugin = self
@@ -104,6 +108,19 @@ public class AdMobPlugin: CAPPlugin, CAPBridgedPlugin {
 
         DispatchQueue.main.async {
             self.bannerExecutor.showBanner(call, request, adUnitID)
+        }
+    }
+
+     /**
+     *  AdMob: Banner
+     *  https://developers.google.com/ad-manager/mobile-ads-sdk/ios/banner?hl=ja
+     */
+    @objc func loadNativeAd(_ call: CAPPluginCall) {
+        let adUnitID = getAdId(call, "ca-app-pub-3940256099942544/3986624511")
+        let request = self.GADRequestWithOption(call.getBool("npa") ?? false)
+
+        DispatchQueue.main.async {
+            self.nativeExecutor.loadNativeAd(call, request, adUnitID)
         }
     }
 

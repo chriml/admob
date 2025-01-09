@@ -58,6 +58,10 @@ export class AdMobWeb extends WebPlugin implements AdMobPlugin {
     console.log('showBanner', options);
   }
 
+  async loadNativeAd(options: AdOptions): Promise<void> {
+    console.log('loadNativeAd', options);
+  }
+
   // Hide the banner, remove it from screen, but can show it later
   async hideBanner(): Promise<void> {
     console.log('hideBanner');

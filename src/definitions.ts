@@ -1,4 +1,5 @@
 import type { BannerDefinitions } from './banner';
+import type { NativeDefinitions } from './native';
 import type { AdmobConsentDefinitions } from './consent';
 import type { InterstitialDefinitions } from './interstitial';
 import type { RewardDefinitions } from './reward';
@@ -6,6 +7,7 @@ import type { RewardInterstitialDefinitions } from './reward-interstitial';
 import type { TrackingAuthorizationStatusInterface } from './shared/tracking-authorization-status.interface';
 
 type AdMobDefinitions = BannerDefinitions &
+  NativeDefinitions &
   RewardDefinitions &
   RewardInterstitialDefinitions &
   InterstitialDefinitions &

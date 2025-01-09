@@ -37,6 +37,9 @@ export class AdMobWeb extends WebPlugin {
     async showBanner(options) {
         console.log('showBanner', options);
     }
+    async loadNativeAd(options) {
+        console.log('loadNativeAd', options);
+    }
     // Hide the banner, remove it from screen, but can show it later
     async hideBanner() {
         console.log('hideBanner');

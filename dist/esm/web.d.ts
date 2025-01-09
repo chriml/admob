@@ -19,6 +19,7 @@ export declare class AdMobWeb extends WebPlugin implements AdMobPlugin {
   setApplicationMuted(options: ApplicationMutedOptions): Promise<void>;
   setApplicationVolume(options: ApplicationVolumeOptions): Promise<void>;
   showBanner(options: AdOptions): Promise<void>;
+  loadNativeAd(options: AdOptions): Promise<void>;
   hideBanner(): Promise<void>;
   resumeBanner(): Promise<void>;
   removeBanner(): Promise<void>;
